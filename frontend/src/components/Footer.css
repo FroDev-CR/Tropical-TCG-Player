@@ -1,0 +1,61 @@
+.custom-footer {
+  background-image: url('../assets/images/portada2.png') !important;
+  background-size: cover;
+  background-position: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.custom-footer .container {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-logo-link:hover {
+  transform: scale(1.1);
+}
+
+.footer-logo {
+  height: 50px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  transition: filter 0.3s ease;
+}
+
+.footer-logo-link:hover .footer-logo {
+  filter: drop-shadow(2px 2px 8px rgba(255, 255, 255, 0.3));
+}
+
+.footer-text {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-logo {
+    height: 40px;
+  }
+  
+  .custom-footer {
+    padding: 1.5rem 0 !important;
+  }
+}

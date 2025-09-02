@@ -1,0 +1,23 @@
+.custom-navbar {
+  background-image: url('../assets/images/portada2.png') !important;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.custom-navbar .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.custom-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}

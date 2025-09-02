@@ -1,0 +1,60 @@
+Informe del paquete
+
+-----------------------------------------------------------------------------
+Documento:
+Nombre: identidad tropical.ai
+Modo de color: Color RGB
+Perfil de color: sRGB IEC61966-2.1
+Unidades de regla: píxeles
+Dimensiones de la mesa de trabajo: 792 px x 612 px
+Mostrar imágenes en modo contorno: Desactivado
+Resaltar fuentes sustituidas: Desactivado
+Resaltar glifos sustituidos: Desactivado
+Conservar capacidad de edición de texto
+Simular papel de color: Desactivado
+
+-----------------------------------------------------------------------------
+Objetos de tintas planas:
+
+-----------------------------------------------------------------------------
+Fuentes no disponibles:Ninguno
+
+-----------------------------------------------------------------------------
+Fuentes protegidas no empaquetadas:Ninguno
+
+-----------------------------------------------------------------------------
+Fuentes:
+Montserrat Light (OTF)
+Montserrat Bold (OTF)
+Montserrat Alternates Black (OTF)
+Montserrat Regular (OTF)
+Roboto Regular (TrueType)
+Roboto ExtraBold (TrueType)
+
+-----------------------------------------------------------------------------
+Fuentes incrustadas:
+Ninguno
+
+-----------------------------------------------------------------------------
+Enlaces no disponibles:
+Ninguno
+
+-----------------------------------------------------------------------------
+Imágenes enlazadas:
+
+C:\Users\julie\Downloads\Color Hunt Palette 03a6a1ffe3bbffa673ff4f0f.png
+Tipo: RGB
+Bits por píxel: 24
+Canales: 3
+Tamaño: 468K, 400 por 400 píxeles
+Dimensiones: 400 por 400 puntos 
+Resolución: 72 por 72 píxeles por pulgada
+
+
+C:\Users\julie\Downloads\Color Hunt Palette 219c90e9b824ee9322d83f31.png
+Tipo: RGB
+Bits por píxel: 24
+Canales: 3
+Tamaño: 468K, 400 por 400 píxeles
+Dimensiones: 400 por 400 puntos 
+Resolución: 72 por 72 píxeles por pulgada

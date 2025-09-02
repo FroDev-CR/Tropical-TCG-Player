@@ -1,0 +1,211 @@
+/* Optimized fonts with reduced effects for better performance */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Montserrat+Alternates:wght@700&display=swap');
+
+/* Reduce font weight imports and effects for performance */
+.tropical-title, 
+.section-title,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat Alternates', sans-serif !important;
+    font-weight: 700 !important; /* Reduced from 900 */
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important; /* Reduced shadow */
+    text-transform: uppercase !important;
+}
+
+/* Optimize button styles - reduce heavy effects */
+.btn {
+    font-family: 'Montserrat Alternates', sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border: 2px solid white !important;
+    background: transparent !important;
+    color: white !important;
+    transition: background-color 0.2s ease !important; /* Reduced transition scope */
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: white !important;
+    color: white !important;
+    /* Removed heavy box-shadow for performance */
+}
+
+/* ====================================================
+   OPTIMIZED GLASSMORPHISM - REDUCED BLUR
+   ==================================================== */
+
+/* Cards with reduced blur for better performance */
+.card {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(8px) !important; /* Reduced from 15px */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important; /* Reduced shadow */
+    border-radius: 15px !important;
+    color: white !important;
+    /* Use transform3d to enable hardware acceleration */
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.card-header {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+.card-body {
+    color: white !important;
+}
+
+/* Modales optimizados */
+.modal-content {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important; /* Reduced from 20px */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 20px !important;
+    transform: translateZ(0); /* Hardware acceleration */
+}
+
+/* Forms optimizados */
+.form-control {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    backdrop-filter: blur(3px) !important; /* Drastically reduced */
+    border-radius: 8px !important;
+    transform: translateZ(0);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    color: white !important;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2) !important; /* Reduced glow */
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Optimize select dropdowns */
+.form-select {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    backdrop-filter: blur(3px) !important; /* Reduced */
+    font-weight: 700 !important;
+    transform: translateZ(0);
+}
+
+.form-select option {
+    background: rgba(30, 30, 30, 0.95) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    padding: 10px !important;
+}
+
+/* Form labels */
+.form-label {
+    color: white !important;
+    font-weight: 600 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important; /* Reduced shadow */
+}
+
+/* Alerts optimizados */
+.alert {
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(5px) !important; /* Reduced from 10px */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    transform: translateZ(0);
+}
+
+/* Tables optimizados */
+.table {
+    color: white !important;
+    background: transparent !important;
+}
+
+.table th {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.table td {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+/* Navigation optimized */
+.nav-pills .nav-link {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(5px) !important; /* Reduced from 10px */
+    margin: 0 5px !important;
+    transform: translateZ(0);
+}
+
+.nav-pills .nav-link.active {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: white !important;
+}
+
+/* Special modal optimizations */
+.card-detail-modal .nav-tabs .nav-link {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(3px) !important; /* Reduced */
+    transform: translateZ(0);
+}
+
+.card-detail-modal .nav-tabs .nav-link.active {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: white !important;
+}
+
+.card-detail-modal .tab-content {
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(5px) !important; /* Reduced from 10px */
+    border-radius: 10px !important;
+    padding: 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transform: translateZ(0);
+}
+
+/* Remove heavy glassmorphism modal effects that cause lag */
+.glassmorphism-modal .modal-content::before {
+    display: none !important; /* Disable heavy pseudo-element */
+}
+
+.glassmorphism-modal .modal-content {
+    background: rgba(0, 0, 0, 0.8) !important; /* Solid background instead of image */
+    backdrop-filter: blur(5px) !important; /* Reduced */
+    border-radius: 20px !important;
+    transform: translateZ(0);
+}
+
+/* Performance-optimized button hover states */
+.btn:hover {
+    transform: translateZ(0); /* Keep hardware acceleration */
+}
+
+/* Disable expensive transitions on mobile */
+@media (max-width: 768px) {
+    .btn, .form-control, .card, .modal-content {
+        backdrop-filter: none !important; /* Disable backdrop-filter on mobile */
+        transition: none !important; /* Disable transitions on mobile */
+    }
+    
+    .card {
+        background: rgba(255, 255, 255, 0.25) !important; /* Solid background fallback */
+    }
+}

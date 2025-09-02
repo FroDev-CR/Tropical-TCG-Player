@@ -1,0 +1,231 @@
+/* src/components/TransactionFilters.css */
+/* Estilos para el componente de filtros */
+
+.transaction-filters {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.transaction-filters .card-header {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 123, 255, 0.05) 100%);
+  border-bottom: 1px solid rgba(0, 123, 255, 0.1);
+  border-radius: 15px 15px 0 0;
+  padding: 1rem 1.5rem;
+}
+
+.transaction-filters .card-body {
+  padding: 1.5rem;
+}
+
+/* Form Controls */
+.transaction-filters .form-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.transaction-filters .form-select,
+.transaction-filters .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.transaction-filters .form-select:focus,
+.transaction-filters .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.1);
+  background: rgba(0, 123, 255, 0.02);
+}
+
+.transaction-filters .form-select:hover,
+.transaction-filters .form-control:hover {
+  border-color: #007bff;
+}
+
+/* Filter Actions */
+.filter-actions {
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.filter-actions .btn {
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-actions .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.filter-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.filter-actions .btn-outline-secondary {
+  border: 2px solid #6c757d;
+  color: #6c757d;
+}
+
+.filter-actions .btn-outline-secondary:hover {
+  background: #6c757d;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.filter-actions .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.filter-help {
+  margin-top: 0.5rem;
+}
+
+.filter-help .text-muted {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Badge in header */
+.transaction-filters .badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transaction-filters .card-body {
+    padding: 1rem;
+  }
+  
+  .transaction-filters .card-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .filter-actions {
+    padding: 0.75rem;
+  }
+  
+  .filter-actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .transaction-filters .form-select,
+  .transaction-filters .form-control {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .transaction-filters .form-label {
+    font-size: 0.85rem;
+  }
+  
+  .filter-actions .d-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .filter-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Animation for opening/closing */
+.transaction-filters {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom select arrow */
+.transaction-filters .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+.transaction-filters .form-select:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23007bff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e");
+}
+
+/* Input placeholder styling */
+.transaction-filters .form-control::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+.transaction-filters .form-control:focus::placeholder {
+  color: #6c757d;
+}
+
+/* Loading state for filters */
+.transaction-filters.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.transaction-filters.loading .form-select,
+.transaction-filters.loading .form-control {
+  background-color: #f8f9fa;
+}
+
+/* Glassmorphism variant */
+.transaction-filters.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.transaction-filters.glass .card-header {
+  background: rgba(0, 123, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.transaction-filters.glass .form-select,
+.transaction-filters.glass .form-control {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.transaction-filters.glass .filter-actions {
+  background: rgba(248, 249, 250, 0.6);
+  backdrop-filter: blur(5px);
+}

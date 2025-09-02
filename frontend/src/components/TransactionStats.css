@@ -1,0 +1,226 @@
+/* src/components/TransactionStats.css */
+/* Estilos para las estadísticas del dashboard */
+
+.stat-card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0.3;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Color variants */
+.stat-card-primary::before {
+  background: linear-gradient(90deg, transparent, #007bff, transparent);
+}
+
+.stat-card-info::before {
+  background: linear-gradient(90deg, transparent, #17a2b8, transparent);
+}
+
+.stat-card-success::before {
+  background: linear-gradient(90deg, transparent, #28a745, transparent);
+}
+
+.stat-card-warning::before {
+  background: linear-gradient(90deg, transparent, #ffc107, transparent);
+}
+
+.stat-card-danger::before {
+  background: linear-gradient(90deg, transparent, #dc3545, transparent);
+}
+
+/* Card Content */
+.stat-card .card-body {
+  padding: 1.5rem;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-card-primary .stat-value {
+  color: #007bff;
+}
+
+.stat-card-info .stat-value {
+  color: #17a2b8;
+}
+
+.stat-card-success .stat-value {
+  color: #28a745;
+}
+
+.stat-card-warning .stat-value {
+  color: #ffc107;
+}
+
+.stat-card-danger .stat-value {
+  color: #dc3545;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-subtitle {
+  font-size: 0.75rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Hover effects */
+.stat-card:hover .stat-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-value {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .stat-card .card-body {
+    padding: 1.25rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .stat-icon {
+    font-size: 1.75rem;
+  }
+  
+  .stat-title {
+    font-size: 0.8rem;
+  }
+  
+  .stat-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-card .card-body {
+    padding: 1rem;
+  }
+  
+  .stat-value {
+    font-size: 1.8rem;
+  }
+  
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+  
+  .stat-title {
+    font-size: 0.75rem;
+  }
+}
+
+/* Animation for numbers */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-value {
+  animation: countUp 0.6s ease-out;
+}
+
+/* Loading state */
+.stat-card.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.stat-card.loading .stat-value,
+.stat-card.loading .stat-title,
+.stat-card.loading .stat-subtitle {
+  background: #f0f0f0;
+  color: transparent;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* Glassmorphism effect */
+.stat-card.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.stat-card.glass .stat-title,
+.stat-card.glass .stat-subtitle {
+  color: rgba(51, 51, 51, 0.8);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .stat-card {
+    background: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .stat-title {
+    color: #e2e8f0;
+  }
+  
+  .stat-subtitle {
+    color: #a0aec0;
+  }
+  
+  .stat-card.glass {
+    background: rgba(45, 55, 72, 0.25);
+    border: 1px solid rgba(226, 232, 240, 0.18);
+  }
+}

@@ -1,0 +1,1162 @@
+:root {
+  --primary-color: #2A2E35;
+  --accent-color: #C5A47E;
+  --transition: 0.3s ease;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  position: relative;
+  color: var(--primary-color);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 2px;
+  background: var(--accent-color);
+}
+
+.calendar-container {
+  height: 70vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.event-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.event-price {
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.modal-image {
+  height: 300px;
+  object-fit: cover;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.nav-hover {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width var(--transition);
+}
+
+.nav-hover:hover::after {
+  width: 100%;
+}
+
+.product-card {
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 0%, rgba(197, 164, 126, 0.05) 100%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.latest-card-hover {
+  transition: transform var(--transition), box-shadow var(--transition);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.latest-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.latest-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Search bar improvements */
+.input-group-text {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+/* Hover effects for cards */
+.hover-effect {
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Card image improvements */
+.card-img-custom {
+  height: 200px;
+  object-fit: contain;
+  background: transparent;
+  padding: 1rem;
+}
+
+/* Favorite button animation */
+.btn.rounded-circle {
+  transition: transform 0.2s ease;
+}
+
+.btn.rounded-circle:hover {
+  transform: scale(1.1);
+}
+
+.admin-card {
+  transition: transform 0.2s ease;
+}
+
+.admin-card:hover {
+  transform: scale(1.02);
+}
+
+.rbc-calendar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.rbc-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.8rem 0;
+  font-weight: 400;
+}
+
+.stream-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.stream-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stream-info-card {
+  background: var(--primary-color);
+  color: white;
+  border: 2px solid var(--accent-color);
+}
+
+.stream-info-card h4 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.stream-info-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Estilos específicos para el Marketplace */
+.card-img-custom {
+  height: 200px;
+  object-fit: contain;
+  background: transparent;
+  padding: 1rem;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fs-7 {
+  font-size: 0.75rem !important;
+}
+
+.fs-8 {
+  font-size: 0.7rem !important;
+}
+
+.fs-9 {
+  font-size: 0.65rem !important;
+}
+
+/* Marketplace List View */
+.marketplace-list-view .list-card {
+  flex-direction: row !important;
+  align-items: center;
+  max-height: 200px;
+}
+
+.marketplace-list-view .list-card .card-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marketplace-list-view .card-img-custom {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.marketplace-list-view .list-card:hover {
+  transform: translateX(8px);
+}
+
+/* Search improvements */
+.search-bar-responsive {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.search-bar-responsive input {
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.search-bar-responsive input:focus {
+  box-shadow: none;
+}
+
+/* Badge improvements */
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Stock indicators */
+.stock-indicator {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+}
+
+.stock-low {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Search suggestions */
+.search-suggestions {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestions-dropdown {
+  border-color: #dee2e6 !important;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  border-bottom: 1px solid #f1f3f4;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover,
+.suggestion-item.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-image {
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+/* Favorite button improvements */
+.favorite-btn {
+  transition: all 0.3s ease;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.favorite-btn:active {
+  transform: scale(0.95);
+}
+
+/* Favorite animation */
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.favorite-btn.animate {
+  animation: heartPulse 0.3s ease-in-out;
+}
+
+/* Mobile-first improvements */
+@media (max-width: 576px) {
+  .product-card {
+    margin-bottom: 1rem;
+  }
+  
+  .card-img-custom {
+    height: 180px;
+    padding: 0.5rem;
+  }
+  
+  .product-card .card-body {
+    padding: 0.75rem;
+  }
+  
+  .product-card .card-title {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .latest-cards-section .card-title {
+    font-size: 0.8rem;
+  }
+  
+  /* Mobile pagination */
+  .pagination .page-item .page-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Touch-friendly buttons */
+  .btn-sm {
+    min-height: 32px;
+    min-width: 32px;
+  }
+  
+  /* Better spacing for mobile */
+  .marketplace-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .marketplace-controls .btn-group {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-img-custom {
+    height: 160px;
+  }
+  
+  .marketplace-list-view .card-img-custom {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .marketplace-list-view .list-card {
+    max-height: 140px;
+  }
+  
+  .search-bar-responsive {
+    border-radius: 15px;
+  }
+  
+  /* Improved card layout for tablets */
+  .product-card .card-body {
+    padding: 1rem;
+  }
+  
+  /* Better button spacing */
+  .d-flex.gap-1 {
+    gap: 0.25rem !important;
+  }
+  
+  /* Filter improvements */
+  .filter-row {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Large mobile and small tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .card-img-custom {
+    height: 170px;
+  }
+  
+  .product-card .card-title {
+    font-size: 0.95rem;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .section {
+    padding: 1.5rem 0;
+  }
+  
+  .card-img-custom {
+    height: 140px;
+  }
+  
+  .product-card .card-body {
+    padding: 0.75rem;
+  }
+}
+
+/* ========================================
+   MARKETPLACE MEJORADO - NUEVOS ESTILOS
+   ======================================== */
+
+/* Estilos para secciones destacadas */
+.featured-sections {
+  margin-bottom: 2rem;
+}
+
+.featured-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  border: 1px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: rgba(13, 110, 253, 0.3);
+}
+
+.featured-card-img {
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover .featured-card-img {
+  transform: scale(1.05);
+}
+
+.latest-card-hover {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.latest-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Estilos para filtros avanzados */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(13, 110, 253, 0.1);
+  border-color: rgba(13, 110, 253, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Estilos para el comparador de precios */
+.stats-cards .rounded {
+  transition: all 0.3s ease;
+}
+
+.stats-cards .rounded:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Animaciones suaves para secciones destacadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.featured-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efectos de hover para badges */
+.badge {
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* Mejoras para el input de búsqueda */
+.input-group .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+/* Loading states mejorados */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Card grid responsive para secciones destacadas */
+@media (min-width: 1200px) {
+  .featured-sections .col-lg-2 {
+    flex: 0 0 auto;
+    width: 16.666667%;
+  }
+}
+
+/* Responsive para marketplace mejorado */
+@media (max-width: 768px) {
+  .featured-sections h4 {
+    font-size: 1.1rem;
+  }
+  
+  .featured-sections small {
+    font-size: 0.8rem;
+  }
+  
+  .featured-card-img {
+    height: 150px !important;
+  }
+  
+  /* Sidebar de filtros en móvil */
+  .col-lg-3 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Botones más grandes en móvil */
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Efectos hover para botones del comparador */
+.btn-outline-info:hover {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+}
+
+/* Mejoras para la tabla del comparador */
+.table th {
+  border-top: none;
+  font-weight: 600;
+  color: #495057;
+  background-color: #f8f9fa;
+}
+
+.table-success {
+  background-color: rgba(25, 135, 84, 0.1) !important;
+}
+
+/* Animación para badges de mejor precio */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.badge.bg-success {
+  animation: pulse 2s infinite;
+}
+
+/* Scroll horizontal para últimas cartas */
+.latest-cards-horizontal {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f8f9fa;
+}
+
+.latest-cards-horizontal::-webkit-scrollbar {
+  height: 6px;
+}
+
+.latest-cards-horizontal::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.latest-cards-horizontal::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 3px;
+}
+
+.latest-cards-horizontal::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+.latest-cards-container {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  min-width: max-content;
+}
+
+.latest-card-item {
+  flex: 0 0 180px;
+  min-width: 180px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .latest-card-item {
+    flex: 0 0 140px;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .latest-card-item {
+    flex: 0 0 120px;
+    min-width: 120px;
+  }
+}
+
+/* Animación de hover para las cartas */
+.latest-card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.latest-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para eventos próximos */
+.upcoming-event-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.upcoming-event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15) !important;
+}
+
+/* Tarjetas móviles simplificadas */
+.mobile-card-simple {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-card-image-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-card-image-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f8f9fa;
+  padding: 0.5rem;
+}
+
+.mobile-price-overlay {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 2;
+}
+
+.mobile-price-badge {
+  background: rgba(40, 167, 69, 0.95);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+/* =======================================================
+   DISEÑO SIMPLIFICADO DE CARTAS - SOLO IMAGEN Y DATOS
+   ======================================================= */
+
+/* Contenedor de carta simplificada */
+.simple-card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.simple-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+}
+
+.simple-card-image-wrapper:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+}
+
+.simple-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0;
+  background: transparent;
+}
+
+.simple-card-overlay {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 2;
+}
+
+.simple-price-badge {
+  background: rgba(40, 167, 69, 0.95);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-transform: uppercase;
+}
+
+.simple-card-info {
+  text-align: center;
+  width: 100%;
+}
+
+.seller-name {
+  color: white !important;
+  font-weight: 600 !important;
+  font-family: 'Montserrat Alternates', sans-serif !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Ajustes para diferentes tamaños de pantalla */
+@media (min-width: 1200px) {
+  .latest-card-item {
+    flex: 0 0 200px;
+    min-width: 200px;
+  }
+  
+  .simple-card-image-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-card-item {
+    flex: 0 0 150px;
+    min-width: 150px;
+  }
+  
+  .simple-card-image-wrapper {
+    height: 220px;
+  }
+  
+  .simple-price-badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+  
+  .seller-name {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .latest-card-item {
+    flex: 0 0 130px;
+    min-width: 130px;
+  }
+  
+  .simple-card-image-wrapper {
+    height: 190px;
+  }
+  
+  .simple-price-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+  
+  .seller-name {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* =========================================================
+   DISEÑO SIMPLIFICADO DEL MARKETPLACE - CARTAS DE BÚSQUEDA
+   ========================================================= */
+
+/* Contenedor de carta simplificada del marketplace */
+.simplified-marketplace-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.simplified-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.simplified-card-image-wrapper:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+
+.simplified-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.simplified-card-image-wrapper:hover .simplified-card-image {
+  transform: scale(1.05);
+}
+
+.simplified-favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+}
+
+.simplified-favorite-btn .btn {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.simplified-favorite-btn .btn:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Información de vendedores */
+.simplified-sellers-info {
+  width: 100%;
+  text-align: center;
+}
+
+.simplified-best-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-badge {
+  background: rgba(40, 167, 69, 0.95);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.seller-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.seller-name {
+  color: white !important;
+  font-weight: 700 !important;
+  font-family: 'Montserrat Alternates', sans-serif !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+  font-size: 0.9rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px;
+}
+
+.more-sellers {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 600 !important;
+  font-family: 'Montserrat Alternates', sans-serif !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+}
+
+/* Responsive para marketplace cards */
+@media (max-width: 768px) {
+  .simplified-card-image-wrapper {
+    height: 280px;
+  }
+  
+  .price-badge {
+    font-size: 1rem;
+    padding: 6px 14px;
+  }
+  
+  .seller-name {
+    font-size: 0.8rem !important;
+  }
+  
+  .more-sellers {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .simplified-card-image-wrapper {
+    height: 250px;
+  }
+  
+  .price-badge {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+  }
+  
+  .seller-name {
+    font-size: 0.75rem !important;
+  }
+  
+  .more-sellers {
+    font-size: 0.65rem !important;
+  }
+}
+
+/* Tarjetas cuadradas de eventos */
+.event-card-item {
+  flex: 0 0 180px;
+  min-width: 180px;
+}
+
+.square-event-card {
+  height: 220px !important;
+}
+
+.event-image-container {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background: transparent;
+}
+
+.event-square-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-placeholder-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.event-overlay {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+}
+
+.event-time-badge {
+  background: rgba(0, 123, 255, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+/* Responsive para eventos */
+@media (max-width: 768px) {
+  .event-card-item {
+    flex: 0 0 140px;
+    min-width: 140px;
+  }
+  
+  .square-event-card {
+    height: 180px !important;
+  }
+  
+  .event-image-container {
+    height: 110px;
+  }
+}
+
+@media (max-width: 576px) {
+  .event-card-item {
+    flex: 0 0 120px;
+    min-width: 120px;
+  }
+  
+  .square-event-card {
+    height: 160px !important;
+  }
+  
+  .event-image-container {
+    height: 90px;
+  }
+  
+  .event-time-badge {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+}

@@ -1,0 +1,182 @@
+/* src/components/RatingStars.css */
+/* Estilos para el componente de estrellas */
+
+.rating-stars-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating-star {
+  cursor: default;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Sizes */
+.rating-star.small {
+  font-size: 0.9rem;
+}
+
+.rating-star.medium {
+  font-size: 1.2rem;
+}
+
+.rating-star.large {
+  font-size: 1.8rem;
+}
+
+/* States */
+.rating-star.empty {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+.rating-star.half-filled {
+  opacity: 0.7;
+  filter: grayscale(50%);
+}
+
+.rating-star.filled {
+  opacity: 1;
+  filter: grayscale(0%);
+  color: #ffc107;
+}
+
+/* Interactive states */
+.rating-stars-container.interactive .rating-star {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rating-stars-container.interactive .rating-star:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.5));
+}
+
+.rating-stars-container.interactive .rating-star:active {
+  transform: scale(0.95);
+}
+
+/* Focus states for accessibility */
+.rating-stars-container.interactive .rating-star:focus {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+/* Rating label */
+.rating-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.85rem;
+}
+
+.rating-value {
+  font-weight: 700;
+  color: #333;
+}
+
+.rating-text {
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+
+/* Hover effects for different sizes */
+.rating-stars-container.interactive .rating-star.small:hover {
+  transform: scale(1.2);
+}
+
+.rating-stars-container.interactive .rating-star.medium:hover {
+  transform: scale(1.15);
+}
+
+.rating-stars-container.interactive .rating-star.large:hover {
+  transform: scale(1.1);
+}
+
+/* Animation for rating changes */
+.rating-star {
+  animation: starGlow 0.3s ease-out;
+}
+
+@keyframes starGlow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(255, 193, 7, 0.8));
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .rating-star.large {
+    font-size: 1.5rem;
+  }
+  
+  .rating-star.medium {
+    font-size: 1.1rem;
+  }
+  
+  .rating-star.small {
+    font-size: 0.85rem;
+  }
+  
+  .stars-wrapper {
+    gap: 1px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .rating-value {
+    color: #e2e8f0;
+  }
+  
+  .rating-text {
+    color: #a0aec0;
+  }
+  
+  .rating-star.filled {
+    color: #ffc107;
+    filter: brightness(1.1);
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .rating-star.empty {
+    opacity: 0.5;
+    filter: grayscale(100%) contrast(2);
+  }
+  
+  .rating-star.filled {
+    filter: contrast(1.5);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .rating-star {
+    transition: none;
+    animation: none;
+  }
+  
+  .rating-stars-container.interactive .rating-star:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,87 @@
+Informe del paquete
+
+-----------------------------------------------------------------------------
+Documento:
+Nombre: tcg cartas.ai
+Modo de color: Color RGB
+Perfil de color: sRGB IEC61966-2.1
+Unidades de regla: centímetros
+Dimensiones de la mesa de trabajo: 41,5047 cm x 21,9773 cm
+Mostrar imágenes en modo contorno: Desactivado
+Resaltar fuentes sustituidas: Desactivado
+Resaltar glifos sustituidos: Desactivado
+Conservar capacidad de edición de texto
+Simular papel de color: Desactivado
+
+-----------------------------------------------------------------------------
+Objetos de tintas planas:
+
+-----------------------------------------------------------------------------
+Fuentes no disponibles:Ninguno
+
+-----------------------------------------------------------------------------
+Fuentes protegidas no empaquetadas:Ninguno
+
+-----------------------------------------------------------------------------
+Fuentes:
+Montserrat SemiBold (OTF)
+Montserrat Bold (OTF)
+Montserrat Black (OTF)
+Zain Black (TrueType)
+Merienda Black (TrueType)
+Floridin (OTF)
+
+-----------------------------------------------------------------------------
+Fuentes incrustadas:
+Ninguno
+
+-----------------------------------------------------------------------------
+Enlaces no disponibles:
+Ninguno
+
+-----------------------------------------------------------------------------
+Imágenes enlazadas:
+
+C:\Users\julie\Downloads\AdobeColor-Caribbean beach paradise with palm trees over crystal clear turquoise water. Sandy tropical shore, natural summer landscape. Beach vacation scenic view for travel and tourism.jpeg
+Tipo: RGB
+Bits por píxel: 24
+Canales: 3
+Tamaño: 11250K, 1600 por 2400 píxeles
+Dimensiones: 338,553 por 507,83 puntos 
+Resolución: 340,272 por 340,272 píxeles por pulgada
+
+
+C:\Users\julie\Downloads\AdobeColor-color theme_na-hora-do-sol-na-praia-tropical-e-mar-com-coqueiro.jpeg
+Tipo: RGB
+Bits por píxel: 24
+Canales: 3
+Tamaño: 11250K, 1600 por 2400 píxeles
+Dimensiones: 338,553 por 507,83 puntos 
+Resolución: 340,272 por 340,272 píxeles por pulgada
+
+
+C:\Users\julie\Downloads\AdobeColor-Tropical Fruit Punch.jpeg
+Tipo: RGB
+Bits por píxel: 24
+Canales: 3
+Tamaño: 11250K, 1600 por 2400 píxeles
+Dimensiones: 341,447 por 512,17 puntos 
+Resolución: 337,388 por 337,388 píxeles por pulgada
+
+
+C:\Users\julie\Downloads\AdobeColor-tropical salad.jpeg
+Tipo: RGB
+Bits por píxel: 24
+Canales: 3
+Tamaño: 5625K, 1600 por 1200 píxeles
+Dimensiones: 341,447 por 256,085 puntos 
+Resolución: 337,388 por 337,388 píxeles por pulgada
+
+
+C:\Users\julie\Downloads\AdobeColor-tropicale.jpeg
+Tipo: RGB
+Bits por píxel: 24
+Canales: 3
+Tamaño: 11250K, 1600 por 2400 píxeles
+Dimensiones: 341,447 por 512,17 puntos 
+Resolución: 337,388 por 337,388 píxeles por pulgada
