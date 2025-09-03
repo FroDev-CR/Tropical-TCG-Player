@@ -2,33 +2,24 @@
 // Configuración de conexión a MongoDB con Mongoose
 
 const mongoose = require('mongoose');
-const { MongoMemoryServer } = require('mongodb-memory-server');
+const config = require('./index');
 
 class Database {
   constructor() {
     this.connection = null;
-    this.mongoServer = null;
   }
 
   async connect() {
     try {
-      let mongoUri;
-
-      // En desarrollo, usar MongoDB Memory Server
-      if (process.env.NODE_ENV === 'development') {
-        console.log('🧪 Iniciando MongoDB Memory Server para desarrollo...');
-        this.mongoServer = await MongoMemoryServer.create({
-          binary: {
-            version: '7.0.0'
-          }
-        });
-        mongoUri = this.mongoServer.getUri();
-        console.log('💾 MongoDB Memory Server iniciado');
-      } else {
-        // En producción, usar MongoDB Atlas
-        mongoUri = process.env.MONGODB_URI;
-        console.log('☁️  Conectando a MongoDB Atlas...');
+      // Siempre usar MongoDB Atlas para persistencia de datos
+      const mongoUri = config.database.uri;
+      
+      if (!mongoUri) {
+        throw new Error('MONGODB_URI no está definida en las variables de entorno');
       }
+
+      console.log('☁️ Conectando a MongoDB Atlas...');
+      console.log('✅ Los datos persistirán entre reinicios');
 
       // Configuración de Mongoose
       mongoose.set('strictQuery', false);
@@ -43,13 +34,10 @@ class Database {
       // Conectar a MongoDB
       this.connection = await mongoose.connect(mongoUri, options);
 
-      console.log('🗃️  MongoDB conectado exitosamente');
-      if (process.env.NODE_ENV === 'development') {
-        console.log('💾 Usando MongoDB Memory Server (datos en memoria)');
-      } else {
-        console.log(`📍 Base de datos: ${this.connection.connection.name}`);
-        console.log(`🌐 Host: ${this.connection.connection.host}`);
-      }
+      console.log('🗃️ MongoDB Atlas conectado exitosamente');
+      console.log(`📍 Base de datos: ${this.connection.connection.name}`);
+      console.log(`🌐 Host: ${this.connection.connection.host}`);
+      console.log('🔒 Datos seguros en la nube - persistencia garantizada');
 
       // Eventos de conexión
       mongoose.connection.on('error', (err) => {
@@ -74,14 +62,7 @@ class Database {
   async disconnect() {
     try {
       await mongoose.connection.close();
-      
-      // Cerrar MongoDB Memory Server si está activo
-      if (this.mongoServer) {
-        await this.mongoServer.stop();
-        console.log('💾 MongoDB Memory Server cerrado');
-      }
-      
-      console.log('👋 Conexión MongoDB cerrada');
+      console.log('👋 Conexión MongoDB Atlas cerrada');
     } catch (error) {
       console.error('❌ Error cerrando conexión:', error);
     }

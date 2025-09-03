@@ -48,9 +48,15 @@ export default function AuthModal({ show, handleClose }) {
 
     try {
       if (activeTab === 'register') {
-        // Validación básica - solo campos obligatorios
+        // Validación completa - todos los campos requeridos por el backend
         if (!formData.email || !formData.password || !formData.username) {
           setError('Email, contraseña y nombre de usuario son requeridos');
+          setLoading(false);
+          return;
+        }
+
+        if (!formData.phone || !formData.cedula || !formData.province) {
+          setError('Teléfono, cédula y provincia son requeridos');
           setLoading(false);
           return;
         }
@@ -61,26 +67,19 @@ export default function AuthModal({ show, handleClose }) {
           return;
         }
 
-        // Llamar al backend para registro
-        // Solo incluir campos no vacíos
+        // Preparar datos para el backend - incluir todos los campos requeridos
         const registerData = {
           username: formData.username.toLowerCase().trim(),
           email: formData.email.toLowerCase().trim(),
-          password: formData.password
+          password: formData.password,
+          phone: formData.phone.trim(),
+          cedula: formData.cedula.trim(),
+          province: formData.province.trim()
         };
 
         // Agregar campos opcionales solo si no están vacíos
         if (formData.fullName && formData.fullName.trim()) {
           registerData.fullName = formData.fullName.trim();
-        }
-        if (formData.phone && formData.phone.trim()) {
-          registerData.phone = formData.phone.trim();
-        }
-        if (formData.cedula && formData.cedula.trim()) {
-          registerData.cedula = formData.cedula.trim();
-        }
-        if (formData.province && formData.province.trim()) {
-          registerData.province = formData.province.trim();
         }
 
         const result = await register(registerData);
